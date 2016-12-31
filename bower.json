@@ -1,0 +1,33 @@
+{
+  "name": "songs",
+  "description": "",
+  "main": "gulpfile.js",
+  "authors": [
+    "Bryan Walsh <bryanwalshprograms@gmail.com>"
+  ],
+  "license": "ISC",
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jQuery": "^3.1.1",
+    "angular-sanitize": "^1.6.1",
+    "angular-animate": "^1.6.1",
+    "angular": "^1.6.1",
+    "angular-material": "^1.1.1",
+    "angular-spotify": "^1.4.2",
+    "bluebird": "^3.4.7",
+    "lodash": "^4.17.3",
+    "angular-route": "^1.6.1",
+    "rxjs": "^4.1.0"
+  },
+  "resolutions": {
+    "angular": "^1.6.1"
+  }
+}

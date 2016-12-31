@@ -1,0 +1,29 @@
+<div ng-controller="SongController" class="song-section">
+    <div class="panel float-container song">
+        <div class="float-container">
+        <div class="text">
+            <div class="song-title">{{selected.item.song.name}}</div>
+            <div class="valign">
+                <b>Artist:</b> {{selected.item.song.artist}}<br/>
+                <b>Album:</b> {{selected.item.song.album}}
+            </div>
+        </div>
+        <div class="album-cover">
+            <img ng-src="{{selected.item.song.image}}">
+        </div>
+        </div>
+        <hr/>
+        <div class="thumbnail-input">
+            Thumbnail: <input type="text" ng-model="selected.item.song.image" ng-change="SaveModel()">
+        </div>
+        <div class="notes">
+            Notes:<br/>
+            <textarea ng-model="selected.item.song.notes" ng-change="SaveModel()"></textarea>
+        </div>
+        <hr>
+        <div class="change-selection">
+            <span ng-click="ChangeSelection()">Change Selection</span>
+        </div>
+    </div>
+
+</div>

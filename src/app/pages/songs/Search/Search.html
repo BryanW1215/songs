@@ -1,0 +1,19 @@
+<div class="search" ng-controller="SearchController">
+    <div class="panel search-input">
+        Search: <input type="text" ng-model="q" ng-change="Search()">
+    </div>
+    <div class="search-results">
+        <div ng-repeat="result in results" class="panel float-container song" ng-click="SelectSong(result)">
+            <div class="text">
+                <div class="song-title">{{result.name}}</div>
+                <div class="valign">
+                    <b>Artist:</b> {{result.artist}}<br/>
+                    <b>Album:</b> {{result.album}}
+                </div>
+            </div>
+            <div class="album-cover">
+                <img ng-src="{{result.image}}">
+            </div>
+        </div>
+    </div>
+</div>

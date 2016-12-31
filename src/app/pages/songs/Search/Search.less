@@ -1,0 +1,28 @@
+.search {
+  max-height: 100%;
+  .search-input {
+    color: @titleText;
+    font-size: 20px;
+    font-weight: 400;
+    margin-bottom: 20px;
+    input {
+      width: 80%;
+      border: none;
+      border-bottom: 2px solid @titleText;
+      color: @titleText;
+      background: none;
+    }
+  }
+  .search-results {
+    .panel {
+      margin-bottom: 1px;
+      cursor: pointer;
+
+      &:hover {
+        border: 3px solid @highlightColor;
+        margin: 5px 0;
+      }
+
+    }
+  }
+}

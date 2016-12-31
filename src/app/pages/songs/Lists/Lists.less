@@ -1,0 +1,15 @@
+.lists {
+  .list-item{
+    cursor: pointer;
+    color: @titleText;
+    font-size: 20px;
+    font-weight: 400;
+    margin-bottom: 20px;
+    i{
+      margin-right:5px;
+    }
+    &.selected, &:hover{
+      border: 3px solid @highlightColor;
+    }
+  }
+}

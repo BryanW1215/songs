@@ -1,0 +1,38 @@
+<div ng-if="selected.list" ng-controller="ListController" class="list">
+    <div class="title-section float-container">
+        <div ng-if="!isEditingTitle" class="title panel float-container left">
+            <div class="list-name left">
+                {{selected.list.name}}
+            </div>
+            <div class="edit-button right" ng-click="EditListTitle()">
+                <i class="fa fa-pencil" aria-hidden="true"></i>
+            </div>
+        </div>
+        <div ng-if="isEditingTitle" class="title panel float-container left">
+            <div class="list-name left">
+                <input type="text" ng-model="selected.list.name">
+            </div>
+            <div class="edit-button right" ng-click="CommitListTitle()">
+                <i class="fa fa-check" aria-hidden="true"></i>
+            </div>
+        </div>
+        <div class="export panel right" ng-click="Export()">
+            <i class="fa fa-download" aria-hidden="true"></i>
+
+        </div>
+    </div>
+
+    <div class="list">
+        <div class="song-list">
+            <div class="song panel" ng-repeat="listItem in selected.list.items"
+                 ng-class="{blank: !listItem.song, selected: selected.item === listItem}"
+                 ng-click="selected.item = listItem">
+                <div class="position">{{listItem.position}}.</div>
+                <div class="title">
+                    <span ng-if="!listItem.song">Click to Select a Song</span>
+                    <span ng-if="listItem.song">{{listItem.song.name}}</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

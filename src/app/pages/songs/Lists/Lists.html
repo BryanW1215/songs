@@ -1,0 +1,8 @@
+<div ng-controller="ListsController" class="lists">
+    <div ng-repeat="list in lists" ng-click="SelectList(list)" class="list-item panel" ng-class="{selected: selected.list && selected.list.id == list.id}">
+        <div><i class="fa fa-times" aria-hidden="true" ng-click="RemoveList(list)"></i> {{list.name}}</div>
+    </div>
+    <div ng-click="CreateList()" class="list-item panel">
+        <i class="fa fa-plus" aria-hidden="true"></i> Create List
+    </div>
+</div>
