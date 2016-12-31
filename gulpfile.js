@@ -23,15 +23,7 @@ gulp.task('less', function () {
         .pipe(gulp.dest(build + 'css'));
 });
 
-gulp.task('webserver', function () {
-    gulp.src(build)
-        .pipe(webserver({
-            livereload: true,
-            open: true,
-            fallback: 'index.html',
-            host: '0.0.0.0'
-        }));
-});
+
 // JSHint task
 gulp.task('vendorscript', ['templatecache'], function () {
     return gulp
@@ -101,7 +93,15 @@ gulp.watch = function (path, task) {
             gulp.run(task);
         }));
 };
-
+gulp.task('webserver', [ 'vendorscript', 'vendorCSS', 'less', 'html', 'images', 'fonts'], function () {
+    gulp.src(build)
+        .pipe(webserver({
+            livereload: true,
+            open: true,
+            fallback: 'index.html',
+            host: '0.0.0.0'
+        }));
+});
 gulp.task('watch', ['script'], function () {
     // Watch our scripts
     gulp.watch(['src/app/**/*.js', 'src/js/*.js'], ['script']);
