@@ -1,9 +1,8 @@
-# songs
-Completion of code challenge at https://github.com/AMCSVOD/angular-top-songs
+Online at http://songs.bryangwalsh.com
+
 ```
 npm install
 bower install
 gulp
 ```
 
-Online at http://toptensongs.s3-website-us-east-1.amazonaws.com
